@@ -1,3 +1,4 @@
+require 'ext/config'
 require 'savon'
 require 'active_model'
 require 'active_support/all'
