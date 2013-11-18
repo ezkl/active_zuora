@@ -132,7 +132,7 @@ module ActiveZuora
         exclude_from_queries :rate_plan_data,
           :destination_account_id, :destination_invoice_owner_id
       end
-
+s
       customize 'AmendRequest' do
         include Amend
       end
@@ -158,6 +158,10 @@ module ActiveZuora
       customize 'PaymentMethod' do
         exclude_from_queries :ach_account_number, :credit_card_number,
           :credit_card_security_code, :gateway_option_data, :skip_validation
+      end
+
+      customize 'ProductRatePlan' do
+        exclude_from_queries :active_currency
       end
 
       customize 'ProductRatePlanCharge' do
